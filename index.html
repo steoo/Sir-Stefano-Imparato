@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sr. Stefano Imparato Website</title>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="vendor/pure/pure.css"/>
+  <link rel="stylesheet" href="vendor/pure/base.css"/>
+  <link rel="stylesheet" href="vendor/pure/base-context.css"/>
+  <link rel="stylesheet" href="vendor/pure/grids.css"/>
+  <link rel="stylesheet" href="vendor/pure/grids-core.css"/>
+  <link rel="stylesheet" href="vendor/pure/grids-units.css"/>
+  <link rel="stylesheet" href="vendor/pure/grids-responsive.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a href="javascript:void(0)" class="menu-btn">“</a>
+    </div>
+    <div class="navigator pure-g center">
+      <div class="menu-wrap pure-u-1">
+        <a href="#home" class="menu-item pure-u-1-6">home.</a>
+        <a href="#about" class="menu-item pure-u-1-6">about the Sir.</a>
+        <a href="#what" class="menu-item pure-u-1-6">what the Sir. does</a>
+        <a href="#works" class="menu-item pure-u-1-6">Sir's works</a>
+        <a href="#contacts" class="menu-item pure-u-1-6">how to write to the Sir.</a>
+        <div class="clear"></div>
+      </div>
+      <a href="#" class="menu-btn">”</a>
+    </div>
+  </header>
+
+  <div id="home" class="logo">
+      <img src="assets/img/logo.png" alt="stefano-imparato-logo"/>
+      <h1>Some stories starts with a “</h1>
+  </div>
+
+  <div id="about" class="pure-g">
+    <div class="pure-u-1-2 center">
+      <h2>About the Sir.</h2>
+      <div class="book-page">
+        <p>Stefano Imparato was born in 1992 from the generous genitals of Dario and Margherita.
+          As you can understand from the names of my parents ( yes, I’m writing in first person now )
+          I’m not a fucking English Sir. I’m instead from Naples, Italy, one of the most beautiful and misunderstood city in the whole world and I just wrote Sr. all around the website because I like the way it looks with the beatiful Serif font I’m using.
+          Currently I’m graduating in Computer Science Engineering and working as Frontend Developer in a startup I co-founded:
+          <a href="http://intertwine.it" target="_blank"><strong>Intertwine.</strong></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <footer class="pure-g">
+    <div class="pure-u-1 center">
+      <h6>made with <a href="#" class="italic">cazzimma</a> in Naples, Italy.</h6>
+    </div>
+  </footer>
+  <script src="//code.jquery.com/jquery-2.2.1.js"></script>
+  <script>
+    $(".menu-btn").click(function () {
+      $("body").toggleClass("opened");
+      $(".navigator").toggleClass("shown");
+      $(".navigator").find(".menu-btn").toggleClass("shown");
+    })
+    $(".menu-item").click(function () {
+      var $toClose = $(window.location.hash),
+          $toOpen = $($(this).attr("href"));
+
+      $toClose.removeClass("open close rotate-show").addClass("close");
+      $toOpen.removeClass("open close rotate-show").addClass("open rotate-show");
+      console.log(window.location.hash, $(this).attr("href"));
+//      $("body").addClass("switch");
+    })
+  </script>
+</body>
+</html>
