@@ -1,0 +1,22 @@
+#about {
+  @include transition;
+  @extend %open;
+  h2 {
+    font-size: 42px;
+    color: $pinkred;
+  }
+}
+
+#about:target{
+//  @include translate-rotate(0, 0);
+}
+
+.book-page {
+  font-family: $sans-serif-font;
+  color: white;
+  padding: 0 150px;
+  text-align: justify;
+  a {
+    color: white;
+  }
+}

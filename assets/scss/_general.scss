@@ -1,0 +1,88 @@
+body {
+  background-color: $purple;
+}
+
+.hide {
+  display: none;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.clear{
+  clear: both;
+}
+
+.nav {
+  font-family: $base-font;
+}
+@for $i from 1 through 5 {
+  .menu-item:nth-of-type(#{$i}) {
+    @include transition(#{$i/3}s);
+    @include transform(0, #{$distance}px);
+  }
+}
+
+.navigator {
+  @include transition;
+  @include transform(0);
+  position: absolute;
+  top: 0;
+  background-color: $pinkred;
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  @at-root .menu-item{
+    margin-top: 50px;
+    text-align: center;
+    color: $purple;
+    .shown & {
+      @include transform(0, 0);
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.shown {
+    @include transform(0, 0);
+  }
+  .menu-btn {
+    @include transition(0.6s);
+    @include transform(0, -100px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-family: $base-font;
+    color: $purple;
+    line-height: 2px;
+    &.shown{
+      @include transform(0, 0);
+    }
+  }
+}
+
+
+
+.menu-btn {
+  font-size: 100px;
+  color: $pinkred;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.overlay {
+  @include transition;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $notsopurple;
+  opacity: 0;
+  z-index: -1;
+  .opened &{
+    opacity: 0.4;
+  }
+}

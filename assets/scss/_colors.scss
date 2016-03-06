@@ -1,0 +1,35 @@
+$pinkred: rgb(223, 64, 90);
+$notpurplenotred: rgb(135, 49, 78);
+$notsopurple: rgb(81, 38, 69);
+$purple: rgb(49, 30, 62);
+$distance: 200;
+
+
+@mixin transition($s: 0.4s){
+  -webkit-transition: -webkit-transform $s;
+  transition: transform $s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+@mixin transform($width: 0, $height: 150px){
+  -webkit-transform: translate3d($width, -$height, 0);
+  transform: translate3d($width, -$height,0);
+}
+
+@mixin translate-rotate($x: 0, $y: 0){
+  -webkit-transform: translateX($x) rotateY($y);
+  transform: translateX($x) rotateY($y);
+}
+
+%close, .close {
+  @include translate-rotate(-180px, 90deg);
+}
+
+%open, .open {
+  @include translate-rotate(180px, 90deg);
+}
+
+.rotate-show {
+  @include translate-rotate(0, 0);
+}

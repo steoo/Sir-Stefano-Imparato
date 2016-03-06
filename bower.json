@@ -1,0 +1,22 @@
+{
+  "name": "Portfolio",
+  "authors": [
+    "Steoo <esseiproject@gmail.com>"
+  ],
+  "description": "Stefano imparato portfolio",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "www.stefanoimparato.it",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure": "~0.6.0"
+  }
+}
