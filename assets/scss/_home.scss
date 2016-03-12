@@ -1,22 +1,17 @@
+#home {
+  @include transition;
+}
 .logo {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   margin-left: -123px;
   margin-top: -36px;
   width: 246px;
+  max-height: 150px;
   color: $pinkred;
   h1 {
     font-size: 15px;
     text-align: center;
   }
-}
-#home {
-  @include transition;
-  /*.switch &{
-    @extend %close;
-  }*/
-}
-#home:target{
-//  @include translate-rotate(0, 0);
 }

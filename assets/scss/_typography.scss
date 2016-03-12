@@ -18,3 +18,40 @@ h6 {
 p {
   line-height: 24px;
 }
+
+.right {
+  text-align: right;
+}
+
+section.pure-g{
+  h2 {
+    font-size: 3.5em;
+    color: $pinkred;
+  }
+}
+.subtitle {
+  font-family: $sans-serif-font;
+  font-size: 1.2em;
+}
+.tilde {
+  font-family: $sans-serif-font;
+  font-size: 2em;
+  display: inline-block;
+  color: white;
+}
+
+.tilde + .subtitle {
+  display: inline-block;
+}
+
+.book-page {
+  p {
+    font-family: $sans-serif-font;
+  }
+}
+
+.skills {
+  .pure-u-1-4{
+    text-align: left;
+  }
+}
