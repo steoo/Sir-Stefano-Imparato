@@ -1,6 +1,22 @@
 @font-face {
   font-family: 'Pistilli Roman';
   src: url("../font/Pistilli-Roman.woff") format("woff"); }
+.close {
+  -webkit-transform: translateX(-180px) rotateY(90deg);
+  transform: translateX(-180px) rotateY(90deg); }
+
+.open {
+  -webkit-transform: translateX(180px) rotateY(90deg);
+  transform: translateX(180px) rotateY(90deg); }
+
+.translate-hidden {
+  -webkit-transform: translate3d(0, 1000px, 0);
+  transform: translate3d(0, 1000px, 0); }
+
+.rotate-show {
+  -webkit-transform: translateX(0) rotateY(0);
+  transform: translateX(0) rotateY(0); }
+
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
@@ -15,17 +31,34 @@ h6 {
 p {
   line-height: 24px; }
 
-.close {
-  -webkit-transform: translateX(-180px) rotateY(90deg);
-  transform: translateX(-180px) rotateY(90deg); }
+.right {
+  text-align: right; }
 
-#about, .open {
-  -webkit-transform: translateX(180px) rotateY(90deg);
-  transform: translateX(180px) rotateY(90deg); }
+section.pure-g h2 {
+  font-size: 3.5em;
+  color: #df405a; }
 
-.rotate-show {
-  -webkit-transform: translateX(0) rotateY(0);
-  transform: translateX(0) rotateY(0); }
+.subtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2em; }
+
+.tilde {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2em;
+  display: inline-block;
+  color: white; }
+
+.tilde + .subtitle {
+  display: inline-block; }
+
+.book-page p {
+  font-family: "Quicksand", sans-serif; }
+
+.skills .pure-u-1-4 {
+  text-align: left; }
+
+html, body {
+  height: 100%; }
 
 body {
   background-color: #311e3e; }
@@ -83,6 +116,19 @@ body {
   -webkit-transform: translate3d(0, -200px, 0);
   transform: translate3d(0, -200px, 0); }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; }
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
 .navigator {
   -webkit-transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
@@ -90,12 +136,12 @@ body {
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transform: translate3d(0, -150px, 0);
   transform: translate3d(0, -150px, 0);
-  position: absolute;
   top: 0;
   background-color: #df405a;
   height: 150px;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   .menu-item {
     margin-top: 50px;
     text-align: center;
@@ -116,6 +162,7 @@ body {
     -webkit-transform: translate3d(0, 100px, 0);
     transform: translate3d(0, 100px, 0);
     position: absolute;
+    z-index: 1;
     right: 0;
     bottom: 0;
     font-family: "Pistilli Roman", serif;
@@ -125,11 +172,23 @@ body {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
 
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 0; }
+  .opened .container {
+    overflow: hidden; }
+
 .menu-btn {
+  position: relative;
   font-size: 100px;
   color: #df405a;
   text-decoration: none;
-  margin: 20px; }
+  margin: 20px;
+  z-index: 1; }
 
 .overlay {
   -webkit-transition: -webkit-transform 0.4s;
@@ -147,43 +206,46 @@ body {
   .opened .overlay {
     opacity: 0.4; }
 
-.logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -123px;
-  margin-top: -36px;
-  width: 246px;
-  color: #df405a; }
-  .logo h1 {
-    font-size: 15px;
-    text-align: center; }
+section.pure-g {
+  height: 100vh; }
+
+.separator, .subtitle {
+  color: white;
+  text-align: center; }
+
+.book-page {
+  font-family: "Quicksand", sans-serif;
+  color: #fffff5;
+  padding: 0 75px;
+  text-align: justify; }
+  .book-page a {
+    color: #fffff5; }
 
 #home {
   -webkit-transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  /*.switch &{
-    @extend %close;
-  }*/ }
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+.logo {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -123px;
+  margin-top: -36px;
+  width: 246px;
+  max-height: 150px;
+  color: #df405a; }
+  .logo h1 {
+    font-size: 15px;
+    text-align: center; }
 
 #about {
   -webkit-transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
-  #about h2 {
-    font-size: 42px;
-    color: #df405a; }
-
-.book-page {
-  font-family: "Quicksand", sans-serif;
-  color: white;
-  padding: 0 150px;
-  text-align: justify; }
-  .book-page a {
-    color: white; }
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  text-align: center; }
 
 footer {
   position: fixed;
