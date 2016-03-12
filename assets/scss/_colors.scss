@@ -31,7 +31,7 @@ $distance: 200;
   @include translate-rotate(180px, 90deg);
 }
 
-.shown {
+.translate-hidden {
   @include transform(0, -1000px);
 }
 
