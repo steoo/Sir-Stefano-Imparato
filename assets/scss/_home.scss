@@ -1,3 +1,6 @@
+#home {
+  @include transition;
+}
 .logo {
   position: absolute;
   top: 50%;
@@ -10,13 +13,4 @@
     font-size: 15px;
     text-align: center;
   }
-}
-#home {
-  @include transition;
-  /*.switch &{
-    @extend %close;
-  }*/
-}
-#home:target{
-//  @include translate-rotate(0, 0);
 }

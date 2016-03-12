@@ -63,8 +63,10 @@ body {
   }
 }
 
-
-
+.container {
+  height: 100%;
+  overflow: hidden;
+}
 .menu-btn {
   font-size: 100px;
   color: $pinkred;
