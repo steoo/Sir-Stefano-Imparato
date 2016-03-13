@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     minify = require('gulp-minify'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require("gulp-watch"),
+    //sass = require("ruby-sass");
     sass = require("gulp-sass");
 
 var css = [
@@ -16,16 +17,20 @@ var css = [
 ];
 
 gulp.task('watch-css', function () {
-    gulp.watch('assets/scss/*.scss',["css"]);
+    gulp.watch('assets/scss/*.scss', ["css"]);
 });
 
 gulp.task('sass', function () {
     return gulp.src('assets/scss/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./assets/css'))
+    //sass('assets/scss/style.scss', function (err, css) {
+    //    console.log(err);
+    //})
+    //    .pipe(gulp.dest('./assets/css'))
 });
 
-gulp.task('css', ["sass"], function () {
+gulp.task('css', [], function () {
     return gulp.src(css)
         .pipe(concat("style.min.css"))
         .pipe(minifycss())
