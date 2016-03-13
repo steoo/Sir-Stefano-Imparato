@@ -17,7 +17,7 @@
         }
     });
 
-    selectors.$menubtn.click(function () {
+    selectors.$menubtn.on("click",function () {
         selectors.$navigator.toggleClass("shown");
         selectors.$navigator.find(".menu-btn").toggleClass("shown");
     });
