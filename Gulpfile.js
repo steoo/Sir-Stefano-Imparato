@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
-    minifycss = require('gulp-minify-css'),
+    minifycss = require('gulp-clean-css'),
     minify = require('gulp-minify'),
     autoprefixer = require('gulp-autoprefixer'),
-    watch = require("gulp-watch");
+    watch = require("gulp-watch"),
+    sass = require("gulp-sass");
 
 var css = [
     "vendor/pure/base.css",
@@ -18,9 +19,15 @@ gulp.task('watch-css', function () {
     gulp.watch('assets/scss/*.scss',["css"]);
 });
 
-gulp.task('css', function () {
+gulp.task('sass', function () {
+    return gulp.src('assets/scss/style.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./assets/css'))
+});
+
+gulp.task('css', ["sass"], function () {
     return gulp.src(css)
-        .pipe(concat("style.css"))
+        .pipe(concat("style.min.css"))
         .pipe(minifycss())
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
