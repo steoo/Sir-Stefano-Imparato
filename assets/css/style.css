@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Pistilli Roman';
   src: url("../../assets/font/Pistilli-Roman.woff") format("woff"); }
+
 .close {
   -webkit-transform: translateX(-180px) rotateY(90deg);
   transform: translateX(-180px) rotateY(90deg); }
@@ -138,8 +139,8 @@ header {
   transition: transform 0.4s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  -webkit-transform: translate3d(0, -150px, 0);
-  transform: translate3d(0, -150px, 0);
+  -webkit-transform: translate3d(0, -200px, 0);
+  transform: translate3d(0, -200px, 0);
   position: relative;
   top: 0;
   background-color: #df405a;
@@ -152,20 +153,20 @@ header {
     text-align: center;
     color: #311e3e; }
     .shown .menu-item {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
+      -webkit-transform: translate3d(0, -200px, 0);
+      transform: translate3d(0, -200px, 0); }
     .menu-item:hover {
       text-decoration: none; }
   .navigator.shown {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
+    -webkit-transform: translate3d(0, -200px, 0);
+    transform: translate3d(0, -200px, 0); }
   .navigator .menu-btn {
     -webkit-transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
     -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-    -webkit-transform: translate3d(0, 100px, 0);
-    transform: translate3d(0, 100px, 0);
+    -webkit-transform: translate3d(0, -200px, 0);
+    transform: translate3d(0, -200px, 0);
     position: absolute;
     z-index: 1;
     right: 0;
@@ -174,8 +175,8 @@ header {
     color: #311e3e;
     line-height: 2px; }
     .navigator .menu-btn.shown {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
+      -webkit-transform: translate3d(0, -200px, 0);
+      transform: translate3d(0, -200px, 0); }
 
 .container {
   position: absolute;
@@ -234,14 +235,13 @@ section.pure-g {
 @media screen and (min-width: 64em) {
   body {
     font-size: 16px; }
-
   .book-page {
     padding: 0 75px; }
     .book-page p {
       font-size: 1em; }
-
   section.pure-g {
     height: 100vh; } }
+
 #home {
   -webkit-transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
@@ -276,5 +276,3 @@ footer {
     letter-spacing: 0.02em; }
   footer a {
     color: #df405a; }
-
-/*# sourceMappingURL=style.css.map */
