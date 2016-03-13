@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Pistilli Roman';
-  src: url("/assets/font/Pistilli-Roman.woff") format("woff"); }
+  src: url("../../assets/font/Pistilli-Roman.woff") format("woff"); }
 .close {
   -webkit-transform: translateX(-180px) rotateY(90deg);
   transform: translateX(-180px) rotateY(90deg); }
