@@ -3,6 +3,7 @@ html, body {
 }
 body {
   background-color: $purple;
+  font-size: 12px;
 }
 
 .hide {
@@ -20,6 +21,7 @@ body {
 
 .nav {
   font-family: $base-font;
+  margin:1.5em 0em;
 }
 @for $i from 1 through 5 {
   .menu-item:nth-of-type(#{$i}) {
@@ -41,18 +43,23 @@ header {
   top: 0;
   left: 0;
   z-index: 2;
+  .menu-btn {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 .navigator {
   @include transition;
   @include transform(0);
+  position: relative;
   top: 0;
   background-color: $pinkred;
-  height: 150px;
   width: 100%;
+  height: 150px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 3;
   @at-root .menu-item{
-    margin-top: 50px;
+    margin-top: 3.125em;
     text-align: center;
     color: $purple;
     .shown & {
@@ -82,13 +89,11 @@ header {
 }
 
 .container {
-//  height: calc(100% - 150px);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100%;
-//  overflow-y: scroll;
   z-index: 0;
   .opened & {
     overflow: hidden;
@@ -96,7 +101,7 @@ header {
 }
 .menu-btn {
   position: relative;
-  font-size: 100px;
+  font-size: 6.25em;
   color: $pinkred;
   text-decoration: none;
   margin: 20px;
@@ -118,9 +123,12 @@ header {
   }
 }
 
-section.pure-g {
+.first {
   height: 100vh;
+}
 
+section.pure-g {
+  text-align: center;
 }
 
 .separator, .subtitle {
@@ -131,9 +139,27 @@ section.pure-g {
 .book-page {
   font-family: $sans-serif-font;
   color: $dirtywhite;
-  padding: 0 75px;
+  padding: 0 20px;
   text-align: justify;
+  p {
+    font-size: 1.3em;
+  }
   a {
     color: $dirtywhite;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  body {
+    font-size: 16px;
+  }
+  .book-page {
+    padding: 0 75px;
+    p{
+      font-size: 1em;
+    }
+  }
+  section.pure-g {
+    height: 100vh;
   }
 }

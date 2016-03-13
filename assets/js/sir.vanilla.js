@@ -1,6 +1,7 @@
-(function ($) {
+(function () {
 
-    var selectors = {
+    var $ = document.querySelector,
+        selectors = {
             $body: $("body"),
             $container: $(".container"),
             $navigator: $(".navigator"),
@@ -26,11 +27,11 @@
             windowHeight = $(window).height();
 
         if(!$(this).hasClass("cazzimma"))
-        selectors.$menubtn.eq(0).trigger("click");
+            selectors.$menubtn.eq(0).trigger("click");
 
         var offset = height < windowHeight ? top - ((windowHeight/2) - (height/2)) : top;
 
         selectors.$body.animate({scrollTop: offset});
         context.shown = href;
     });
-})(jQuery);
+})();

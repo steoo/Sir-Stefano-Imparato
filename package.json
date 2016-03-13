@@ -1,0 +1,33 @@
+{
+  "name": "stefano-imparato-portfolio",
+  "version": "1.0.0",
+  "description": "stefano imparato portfolio",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steoo/Sir-Stefano-Imparato.git"
+  },
+  "keywords": [
+    "stefano",
+    "imparato",
+    "portfolio"
+  ],
+  "author": "Stefano Imparato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steoo/Sir-Stefano-Imparato/issues"
+  },
+  "homepage": "https://github.com/steoo/Sir-Stefano-Imparato#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-minify": "0.0.5",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-watch": "^4.3.5"
+  }
+}
