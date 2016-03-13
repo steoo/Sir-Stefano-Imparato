@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "pure": "~0.6.0",
-    "modernizr": "~3.3.1"
+    "modernizr": "~3.3.1",
+    "jquery": "~2.2.1"
   }
 }

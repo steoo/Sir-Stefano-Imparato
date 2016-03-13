@@ -1,12 +1,7 @@
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"], .pure-g [class *= "pure-u-sm"] {
-  /* Set your content font stack here: */
   font-family: $base-font;
 }
-a{
-//  text-decoration: none;
-}
-
 h6 {
   font-family: $base-font;
 }
@@ -22,7 +17,6 @@ p {
 .right {
   text-align: right;
 }
-
 section.pure-g{
   h2 {
     font-size: 3.5em;
@@ -49,7 +43,6 @@ section.pure-g{
     font-family: $sans-serif-font;
   }
 }
-
 .skills {
   [class *= "pure-u"] {
     text-align: left;
